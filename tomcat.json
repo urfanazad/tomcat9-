@@ -1,0 +1,29 @@
+{
+  "builders":[
+  {
+  "type": "amazon-ebs",
+  "access_key": "AKIAUVAC3PLEKECEWD6L",
+  "secret_key": "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",
+  "region": "us-east-2",
+  "source_ami": "ami-0986c2ac728528ac2",
+  "instance_type": "t2.micro",
+  "ssh_username": "ubuntu",
+  "ami_name": "Tomcat9"
+  }
+  ],
+  "provisioners" :[
+  {
+  "type": "shell",
+  "inline": [
+    "sudo su",
+    "sudo apt-get update",
+    "sudo apt-get install default-jdk -y",
+    "sudo apt-get install wget",
+    "wget http://www-us.apache.org/dist/tomcat/tomcat-9/v9.0.22/bin/apache-tomcat-9.0.22.tar.gz",
+    "tar xzf apache-tomcat-9.0.22.tar.gz",
+    "sudo mv apache-tomcat-9.0.22 /usr/local/apache-tomcat9"
+  ]
+  }
+  
+  ]
+  }
