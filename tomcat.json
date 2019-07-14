@@ -2,10 +2,10 @@
   "builders":[
   {
   "type": "amazon-ebs",
-  "access_key": "AKIAUVAC3PLEKECEWD6L",
-  "secret_key": "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",
+  "access_key": "",
+  "secret_key": "",
   "region": "us-east-2",
-  "source_ami": "ami-0986c2ac728528ac2",
+  "source_ami": "",
   "instance_type": "t2.micro",
   "ssh_username": "ubuntu",
   "ami_name": "Tomcat9"
